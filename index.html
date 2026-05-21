@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مکتبہ فیضان مدینہ - عطر کلیکشن</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c5a880; /* خوبصورت سنہرا رنگ */
+            --bg-light: #f9f9f9;
+            --text-dark: #333333;
+            --text-muted: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif, 'Noto Nastaliq Urdu';
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.6;
+            direction: rtl; /* اردو کے لیے دائیں سے بائیں */
+        }
+
+        /* ہیڈر اور برانڈ ڈیزائن */
+        header {
+            border-bottom: 1px solid #eaeaea;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* اوپر دائیں جانب لوگو کی جگہ */
+        .brand-container {
+            text-align: right;
+        }
+
+        .brand-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .brand-tagline {
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            margin-top: 2px;
+        }
+
+        /* ہیرو سیکشن (مین بینر) */
+        .hero {
+            padding: 100px 40px;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* پروڈکٹس کا سیکشن */
+        .products-section {
+            padding: 80px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: var(--accent-color);
+            margin: 15px auto 0 auto;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--bg-light);
+            border: 1px solid #eaeaea;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: #e0e0e0;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* فوٹر */
+        footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 3px solid var(--accent-color);
+        }
+
+        .footer-address {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-rights {
+            font-size: 0.9rem;
+            color: #888888;
+            margin-top: 15px;
+        }
+
+        /* موبائل کے لیے سیٹنگز */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column-reverse;
+                gap: 20px;
+                text-align: center;
+            }
+            .brand-container {
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ہیڈر اور برانڈنگ -->
+    <header>
+        <ul class="nav-links">
+            <li><a href="#home">ہوم</a></li>
+            <li><a href="#collections">عطر کلیکشن</a></li>
+        </ul>
+        
+        <div class="brand-container">
+            <div class="brand-logo">مکتبہ فیضان مدینہ</div>
+            <div class="brand-tagline">خالص معیار</div>
+        </div>
+    </header>
+
+    <!-- مین بینر -->
+    <section class="hero" id="home">
+        <h1>خالص معیار، مناسب دام</h1>
+        <p>نفیس اور دیرپا عطروں کا ایسا انتخاب جو آپ کی شخصیت کو باوقار بنائے۔</p>
+        <a href="#collections" class="cta-btn">کلیکشن دیکھیں</a>
+    </section>
+
+    <!-- پروڈکٹس -->
+    <section class="products-section" id="collections">
+        <h2 class="section-title">ہماری خاص پیشکش</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-image">عطر کی تصویر</div>
+                <h3 class="product-title">مستند عود (Oud)</h3>
+                <p class="product-price">Rs. 2,450</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">عطر کی تصویر</div>
+                <h3 class="product-title">صندل کلاسک</h3>
+                <p class="product-price">Rs. 1,850</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">عطر کی تصویر</div>
+                <h3 class="product-title">مکس روز امبر</h3>
+                <p class="product-price">Rs. 2,100</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- فوٹر -->
+    <footer>
+        <div class="footer-address">مکتبہ فیضان مدینہ، امام بارگاہ روڈ، جھمرہ</div>
+        <div class="footer-rights">&copy; 2026 تمام حقوق محفوظ ہیں۔</div>
+    </footer>
+
+</body>
+</html>

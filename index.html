@@ -3,275 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مکتبہ فیضان مدینہ - پریمیم عطر اسٹور</title>
+    <title>عطر محل | خالص معیار، مناسب دام</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* سینیئر ڈویلپر آرکیٹیکچر: گلوبل ویری ایبلز */
         :root {
-            --bg-soothing: #fcfbfa;    /* انتہائی پرسکون مائل بہ کریم رنگ */
-            --text-dark: #2d2d2d;      /* نرم کالا رنگ */
-            --accent-gold: #b5945b;    /* پریمیم گولڈ */
-            --primary-deep: #1a2a20;   /* شاہی زمردی کالا */
-            --card-bg: #ffffff;
+            --bg-porcelain: #faf8f5;   /* لگژری پریمیم آف وائٹ */
+            --text-onyx: #1c1b1a;      /* گہرا نفیس چارکول */
+            --brand-gold: #8c764d;     /* اینٹیک مٹڈ گولڈ */
+            --border-subtle: #e8e3dd;  /* دھیمی باؤنڈری لائن */
+            --white: #ffffff;
+            
+            /* فونٹس کی ترجیحی ترتیب */
+            --font-urdu: 'Jamil Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Amiri', serif;
         }
 
+        /* ری سیٹ اور بیسک سیٹنگز */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            background-color: var(--bg-soothing);
-            color: var(--text-dark);
-            line-height: 1.8;
-            direction: rtl;
-            font-family: 'Jamil Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Amiri', serif;
-            -webkit-font-smoothing: antialiased;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* ہیڈر */
+        body {
+            background-color: var(--bg-porcelain);
+            color: var(--text-onyx);
+            font-family: var(--font-urdu);
+            line-height: 1.8;
+            direction: rtl;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* نیوی گیشن اینڈ ہیڈر بار */
         header {
-            border-bottom: 1px solid #f0ebe4;
-            padding: 20px 40px;
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 20px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: var(--card-bg);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 1.05rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        /* برانڈ لوگو (اوپر دائیں جانب) */
-        .brand-container {
+        /* برانڈنگ - لوگو اوپر دائیں جانب اور خالص معیار الگ نیچے */
+        .brand-block {
             text-align: right;
         }
 
-        .brand-logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-deep);
+        .brand-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-onyx);
+            letter-spacing: -0.5px;
             line-height: 1.2;
-        }
-
-        .logo-separator {
-            width: 35px;
-            height: 1px;
-            background-color: var(--accent-gold);
-            margin: 4px 0 4px auto;
         }
 
         .brand-tagline {
             font-size: 0.95rem;
-            color: var(--accent-gold);
+            color: var(--brand-gold);
+            margin-top: 4px;
+            font-weight: 400;
         }
 
-        /* ہیرو سیکشن */
-        .hero {
-            padding: 100px 20px;
-            text-align: center;
-            background: linear-gradient(rgba(252, 251, 250, 0.92), rgba(252, 251, 250, 0.95)), 
-                        url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            border-bottom: 1px solid #f0ebe4;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--primary-deep);
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            color: #555;
-        }
-
-        /* فیچرز بار */
-        .features-bar {
+        .nav-menu {
             display: flex;
-            justify-content: space-around;
-            background: var(--primary-deep);
-            color: #fff;
-            padding: 20px;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-onyx);
+            font-size: 1.05rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--brand-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--brand-gold);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* لگژری ایڈیٹوریل ہیرو سیکشن */
+        .hero-showcase {
+            padding: 120px 20px;
             text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+            background: radial-gradient(circle at center, #ffffff 0%, var(--bg-porcelain) 100%);
+        }
+
+        .hero-showcase h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: var(--text-onyx);
+            margin-bottom: 20px;
+        }
+
+        .hero-showcase p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            color: #4a4a4a;
+        }
+
+        .action-link {
+            display: inline-block;
+            padding: 14px 45px;
+            background-color: var(--text-onyx);
+            color: var(--white);
+            text-decoration: none;
             font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--text-onyx);
         }
 
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .action-link:hover {
+            background-color: transparent;
+            color: var(--text-onyx);
+            border-color: var(--text-onyx);
         }
 
-        /* اسٹور گریڈ */
-        .store-section {
-            padding: 70px 20px;
+        /* فیس بک لائیو اسٹریم کور سیکشن */
+        .live-hub-container {
+            padding: 90px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-deep);
-            margin-bottom: 10px;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            color: var(--text-onyx);
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 1px;
+            background-color: var(--brand-gold);
+            margin: 0 auto 15px auto;
         }
 
         .section-subtitle {
-            text-align: center;
-            color: var(--accent-gold);
-            margin-bottom: 45px;
-            font-size: 1.1rem;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: var(--card-bg);
-            border: 1px solid #f0ebe4;
-            padding: 20px;
-            border-radius: 4px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(181, 148, 91, 0.07);
-        }
-
-        .product-img-box {
-            width: 100%;
-            height: 240px;
-            background: #fdfdfd;
-            border: 1px dashed #e8e2da;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-        }
-
-        .product-title {
-            font-size: 1.35rem;
-            color: var(--primary-deep);
-            margin-bottom: 8px;
-        }
-
-        .product-desc {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: #666;
-            margin-bottom: 15px;
-            padding: 0 10px;
         }
 
-        .product-price {
-            color: var(--accent-gold);
-            font-weight: bold;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+        /* فیس بک فیڈ کا عالمی معیار کا فریم */
+        .feed-frame-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* آرڈر بٹن جو فیس بک میسنجر پر لے جائے گا */
-        .order-btn {
-            display: block;
+        .fb-card-shadow {
+            background-color: var(--white);
+            padding: 25px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 30px 60px rgba(28, 27, 26, 0.04);
+            max-width: 550px;
             width: 100%;
-            padding: 10px;
-            background: var(--primary-deep);
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            border-radius: 2px;
-            transition: background 0.3s;
+            transition: transform 0.4s ease;
         }
 
-        .order-btn:hover {
-            background: var(--accent-gold);
+        .fb-card-shadow:hover {
+            transform: translateY(-5px);
         }
 
-        /* فیس بک لائیو ہب */
-        .fb-hub-section {
-            background: #f5f2ed;
+        /* پریمیم منیملسٹ فوٹر */
+        footer {
+            background-color: var(--text-onyx);
+            color: var(--white);
             padding: 60px 20px;
             text-align: center;
-            border-top: 1px solid #e8e2da;
+            border-top: 3px solid var(--brand-gold);
         }
 
-        .fb-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
+        .footer-location {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: var(--bg-porcelain);
         }
 
-        /* فوٹر */
-        footer {
-            background-color: var(--primary-deep);
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 4px solid var(--accent-gold);
-        }
-
-        .footer-address {
-            font-size: 1.15rem;
-            margin-bottom: 10px;
-        }
-
-        .footer-rights {
-            font-size: 0.9rem;
-            color: #a3b0a7;
-            margin-top: 15px;
+        .footer-meta {
+            font-size: 0.95rem;
+            color: #8a8a8a;
+            margin-top: 25px;
             direction: ltr;
         }
 
+        /* رسپانسو ڈیزائن برائے موبائل ڈیوائسز */
         @media (max-width: 768px) {
             header {
                 flex-direction: column-reverse;
-                gap: 20px;
+                gap: 25px;
+                padding: 25px 20px;
+            }
+            .brand-block {
                 text-align: center;
+            }
+            .nav-menu {
+                gap: 25px;
+            }
+            .hero-showcase h1 {
+                font-size: 2.4rem;
+            }
+            .hero-showcase p {
+                font-size: 1.1rem;
+            }
+            .fb-card-shadow {
                 padding: 15px;
-            }
-            .brand-container {
-                text-align: center;
-            }
-            .logo-separator {
-                margin: 4px auto;
-            }
-            .features-bar {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
             }
         }
     </style>
@@ -279,90 +251,48 @@
 <body>
 
     <header>
-        <ul class="nav-links">
+        <ul class="nav-menu">
             <li><a href="#home">ہوم</a></li>
-            <li><a href="#shop">عطر دکان</a></li>
-            <li><a href="#fb-updates">تازہ ترین پوسٹس</a></li>
+            <li><a href="#live-journal">ڈیجیٹل لائیو وال</a></li>
         </ul>
         
-        <div class="brand-container">
-            <div class="brand-logo">مکتبہ فیضان مدینہ</div>
-            <div class="logo-separator"></div>
-            <div class="brand-tagline">خالص معیار</div>
+        <div class="brand-block">
+            <div class="brand-title">عطر محل</div>
+            <div class="brand-tagline">خالص معیار، مناسب دام</div>
         </div>
     </header>
 
-    <section class="hero" id="home">
+    <section class="hero-showcase" id="home">
         <h1>خالص معیار، مناسب دام</h1>
-        <p>مکتبہ فیضان مدینہ کے تیار کردہ نفیس اور دیرپا عطر اب ایک نئے ڈیجیٹل روپ میں۔</p>
-        <a href="#shop" class="order-btn" style="display:inline-block; width:auto; padding: 12px 45px;">خوشبوئیں دیکھیں</a>
+        <p>نفیس اور لازوال خوشبوؤں کا لائیو ڈیجیٹل جرنل۔ ہمارے فیس بک پیج پر اپلوڈ ہونے والی ہر نئی کلیکشن اب براہِ راست یہاں دیکھیں۔</p>
+        <a href="#live-journal" class="action-link">لائیو پوسٹس دیکھیں</a>
     </section>
 
-    <div class="features-bar">
-        <div class="feature-item">✓ 100% خالص اور دیرپا عطر</div>
-        <div class="feature-item">✓ مناسب اور منصفانہ دام</div>
-        <div class="feature-item">✓ فیس بک میسنجر پر آسان آرڈر سسٹم</div>
-    </div>
-
-    <section class="store-section" id="shop">
-        <h2 class="section-title">ہماری مشہور خوشبوئیں</h2>
-        <p class="section-subtitle">کسی بھی عطر پر کلک کر کے فیس بک میسنجر پر براہِ راست رابطہ کریں</p>
-        
-        <div class="product-grid">
-            
-            <div class="product-card">
-                <div class="product-img-box">
-                    <span>Oud Premium</span>
-                </div>
-                <h3 class="product-title">مستند عود (Oud)</h3>
-                <p class="product-desc">ایک باوقار اور گہری خوشبو جو خاص محافل اور طویل دورانیے کے لیے بہترین ہے۔</p>
-                <p class="product-price">Rs. 2,450</p>
-                <a href="https://m.me/IttarMahal" target="_blank" class="order-btn">فیس بک پر آرڈر کریں</a>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img-box">
-                    <span>Sandal Classic</span>
-                </div>
-                <h3 class="product-title">صندل کلاسک</h3>
-                <p class="product-desc">خالص صندل کی لکڑی سے تیار کردہ روایتی، ٹھنڈی اور پرسکون خوشبو۔</p>
-                <p class="product-price">Rs. 1,850</p>
-                <a href="https://m.me/IttarMahal" target="_blank" class="order-btn">فیس بک پر آرڈر کریں</a>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img-box">
-                    <span>Rose Amber</span>
-                </div>
-                <h3 class="product-title">مکس روز امبر</h3>
-                <p class="product-desc">گلاب کی نفاست اور امبر کی گرمائش کا ایک سحر انگیز اور جدید امتزاج۔</p>
-                <p class="product-price">Rs. 2,100</p>
-                <a href="https://m.me/IttarMahal" target="_blank" class="order-btn">فیس بک پر آرڈر کریں</a>
-            </div>
-
+    <section class="live-hub-container" id="live-journal">
+        <div class="section-header">
+            <h2 class="section-title">تازہ ترین عطر کلیکشن</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">فیس بک پیج پر شیئر کی جانے والی تمام نئی خوشبوئیں اور اپڈیٹس یہاں خود بخود لائیو اپڈیٹ ہوتی ہیں</p>
         </div>
-    </section>
-
-    <section class="fb-hub-section" id="fb-updates">
-        <h2 class="section-title">فیس بک لائیو وال (Live Wall)</h2>
-        <p style="color: #666;">ہمارے فیس بک پیج کی تازہ ترین سرگرمیاں اور نئی آنے والی پروڈکٹس یہاں دیکھیں</p>
         
-        <div class="fb-wrapper">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIttarMahal&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
-                    width="500" 
-                    height="600" 
-                    style="border:none; overflow:hidden; max-width:100%; background: #fff;" 
-                    scrolling="no" 
-                    frameborder="0" 
-                    allowfullscreen="true" 
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
+        <div class="feed-frame-wrapper">
+            <div class="fb-card-shadow">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIttarMahal&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false" 
+                        width="500" 
+                        height="650" 
+                        style="border:none; overflow:hidden; width:100%; max-width:100%; min-height:650px;" 
+                        scrolling="no" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-address">مکتبہ فیضان مدینہ، امام بارگاہ روڈ, جھمرہ</div>
-        <div class="footer-rights">&copy; 2026 Maktaba Faizan Madina. All Rights Reserved.</div>
+        <div class="footer-location">امام بارگاہ روڈ، جھمرہ</div>
+        <div class="footer-meta">&copy; 2026 Ittar Mahal. Crafted with Excellence. All Rights Reserved.</div>
     </footer>
 
 </body>

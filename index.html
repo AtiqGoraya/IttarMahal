@@ -4,110 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مکتبہ فیضان مدینہ - عطر کلیکشن</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary-color: #1a1a1a;
-            --accent-color: #c5a880; /* خوبصورت سنہرا رنگ */
-            --bg-light: #f9f9f9;
-            --text-dark: #333333;
-            --text-muted: #666666;
+            --bg-soothing: #fbf9f6;    /* آنکھوں کے لیے پرسکون صندلی/آف وائٹ رنگ */
+            --text-dark: #2d2d2d;      /* نرم کالا رنگ جو نظر پر بھاری نہ پڑے */
+            --accent-gold: #b5945b;    /* نفیس اور باوقار سنہرا رنگ */
+            --primary-deep: #1e2d24;   /* گہرا زمردی رنگ جو پریمیم لک دیتا ہے */
+            --card-bg: #ffffff;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif, 'Noto Nastaliq Urdu';
         }
 
         body {
-            background-color: #ffffff;
+            background-color: var(--bg-soothing);
             color: var(--text-dark);
-            line-height: 1.6;
-            direction: rtl; /* اردو کے لیے دائیں سے بائیں */
+            line-height: 1.8;
+            direction: rtl; /* اردو کے لیے دائیں سے بائیں ترتیب */
+            /* جمیل نوری نستعلیق کو ترجیح دی گئی ہے، نہ ہونے پر گوگل نستعلیق چلے گا */
+            font-family: 'Jamil Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Amiri', Georgia, serif;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* ہیڈر اور برانڈ ڈیزائن */
         header {
-            border-bottom: 1px solid #eaeaea;
-            padding: 20px 40px;
+            border-bottom: 1px solid #e8e2da;
+            padding: 25px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #fff;
+            background: var(--card-bg);
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 35px;
             list-style: none;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
-            font-size: 1rem;
-            transition: color 0.3s;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--accent-gold);
         }
 
-        /* اوپر دائیں جانب لوگو کی جگہ */
+        /* اوپر دائیں جانب لوگو اور خالص معیار کی ترتیب */
         .brand-container {
             text-align: right;
         }
 
         .brand-logo {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: bold;
-            color: var(--primary-color);
-            letter-spacing: 1px;
+            color: var(--primary-deep);
+            line-height: 1.2;
+        }
+
+        .logo-separator {
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent-gold);
+            margin: 4px 0 4px auto;
         }
 
         .brand-tagline {
-            font-size: 0.95rem;
-            color: var(--accent-color);
-            margin-top: 2px;
+            font-size: 1rem;
+            color: var(--accent-gold);
+            letter-spacing: 1px;
         }
 
-        /* ہیرو سیکشن (مین بینر) */
+        /* مین بینر (ہیرو سیکشن) */
         .hero {
-            padding: 100px 40px;
+            padding: 120px 40px;
             text-align: center;
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-            border-bottom: 1px solid #f0f0f0;
+            background: linear-gradient(rgba(251, 249, 246, 0.9), rgba(251, 249, 246, 0.95)), 
+                        url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            border-bottom: 1px solid #e8e2da;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             margin-bottom: 20px;
-            color: var(--primary-color);
+            color: var(--primary-deep);
+            font-weight: 400;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 30px auto;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+            opacity: 0.9;
         }
 
         .cta-btn {
             display: inline-block;
-            padding: 12px 35px;
-            background-color: var(--primary-color);
-            color: #fff;
+            padding: 12px 40px;
+            background-color: var(--primary-deep);
+            color: #ffffff;
             text-decoration: none;
-            font-size: 1rem;
-            transition: background 0.3s;
+            font-size: 1.1rem;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
 
         .cta-btn:hover {
-            background-color: var(--accent-color);
+            background-color: var(--accent-gold);
         }
 
-        /* پروڈکٹس کا سیکشن */
+        /* عطر کلیکشن سیکشن */
         .products-section {
             padding: 80px 40px;
             max-width: 1200px;
@@ -116,100 +134,112 @@
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.2rem;
+            color: var(--primary-deep);
+            margin-bottom: 50px;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 70px;
             height: 1px;
-            background: var(--accent-color);
-            margin: 15px auto 0 auto;
+            background: var(--accent-gold);
+            margin: 12px auto 0 auto;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 35px;
         }
 
         .product-card {
-            background: var(--bg-light);
-            border: 1px solid #eaeaea;
-            padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid #e8e2da;
+            padding: 25px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 12px 25px rgba(181, 148, 91, 0.08);
         }
 
         .product-image {
             width: 100%;
-            height: 250px;
-            background: #e0e0e0;
+            height: 260px;
+            background: #fdfcfb;
+            border: 1px dashed #e8e2da;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #777;
+            color: #9a9081;
+            font-size: 1.1rem;
         }
 
         .product-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary-deep);
         }
 
         .product-price {
-            color: var(--accent-color);
+            color: var(--accent-gold);
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
 
         /* فوٹر */
         footer {
-            background-color: var(--primary-color);
+            background-color: var(--primary-deep);
             color: #ffffff;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
-            border-top: 3px solid var(--accent-color);
+            padding: 50px 20px;
+            margin-top: 80px;
+            border-top: 4px solid var(--accent-gold);
         }
 
         .footer-address {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
         }
 
         .footer-rights {
-            font-size: 0.9rem;
-            color: #888888;
-            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #a3b0a7;
+            margin-top: 20px;
+            direction: ltr; /* کاپی رائٹ ٹیکسٹ کے لیے بائیں سے دائیں */
         }
 
-        /* موبائل کے لیے سیٹنگز */
+        /* موبائل ڈسپلے کے لیے متناسب تبدیلیاں */
         @media (max-width: 768px) {
             header {
                 flex-direction: column-reverse;
-                gap: 20px;
+                gap: 25px;
                 text-align: center;
+                padding: 20px;
             }
             .brand-container {
                 text-align: center;
             }
+            .logo-separator {
+                margin: 4px auto;
+            }
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.3rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ہیڈر اور برانڈنگ -->
     <header>
         <ul class="nav-links">
             <li><a href="#home">ہوم</a></li>
@@ -218,18 +248,17 @@
         
         <div class="brand-container">
             <div class="brand-logo">مکتبہ فیضان مدینہ</div>
+            <div class="logo-separator"></div>
             <div class="brand-tagline">خالص معیار</div>
         </div>
     </header>
 
-    <!-- مین بینر -->
     <section class="hero" id="home">
         <h1>خالص معیار، مناسب دام</h1>
         <p>نفیس اور دیرپا عطروں کا ایسا انتخاب جو آپ کی شخصیت کو باوقار بنائے۔</p>
         <a href="#collections" class="cta-btn">کلیکشن دیکھیں</a>
     </section>
 
-    <!-- پروڈکٹس -->
     <section class="products-section" id="collections">
         <h2 class="section-title">ہماری خاص پیشکش</h2>
         <div class="product-grid">
@@ -255,10 +284,9 @@
         </div>
     </section>
 
-    <!-- فوٹر -->
     <footer>
         <div class="footer-address">مکتبہ فیضان مدینہ، امام بارگاہ روڈ، جھمرہ</div>
-        <div class="footer-rights">&copy; 2026 تمام حقوق محفوظ ہیں۔</div>
+        <div class="footer-rights">&copy; 2026 Maktaba Faizan Madina. All Rights Reserved.</div>
     </footer>
 
 </body>

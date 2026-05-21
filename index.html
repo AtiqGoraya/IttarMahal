@@ -29,7 +29,6 @@
             color: var(--text-dark);
             line-height: 1.8;
             direction: rtl; /* اردو کے لیے دائیں سے بائیں ترتیب */
-            /* جمیل نوری نستعلیق کو ترجیح دی گئی ہے، نہ ہونے پر گوگل نستعلیق چلے گا */
             font-family: 'Jamil Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Amiri', Georgia, serif;
             -webkit-font-smoothing: antialiased;
         }
@@ -61,7 +60,7 @@
             color: var(--accent-gold);
         }
 
-        /* اوپر دائیں جانب لوگو اور خالص معیار کی ترتیب */
+        /* اوپر دائیں جانب لوگو کی جگہ */
         .brand-container {
             text-align: right;
         }
@@ -83,7 +82,6 @@
         .brand-tagline {
             font-size: 1rem;
             color: var(--accent-gold);
-            letter-spacing: 1px;
         }
 
         /* مین بینر (ہیرو سیکشن) */
@@ -192,6 +190,23 @@
             font-size: 1.3rem;
         }
 
+        /* فیس بک لائیو فیڈ سیکشن */
+        .facebook-section {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .fb-container {
+            display: flex;
+            justify-content: center;
+            background: var(--card-bg);
+            padding: 20px;
+            border: 1px solid #e8e2da;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
         /* فوٹر */
         footer {
             background-color: var(--primary-deep);
@@ -205,17 +220,16 @@
         .footer-address {
             font-size: 1.2rem;
             margin-bottom: 12px;
-            letter-spacing: 0.5px;
         }
 
         .footer-rights {
             font-size: 0.95rem;
             color: #a3b0a7;
             margin-top: 20px;
-            direction: ltr; /* کاپی رائٹ ٹیکسٹ کے لیے بائیں سے دائیں */
+            direction: ltr;
         }
 
-        /* موبائل ڈسپلے کے لیے متناسب تبدیلیاں */
+        /* موبائل ڈسپلے سیٹنگز */
         @media (max-width: 768px) {
             header {
                 flex-direction: column-reverse;
@@ -244,6 +258,7 @@
         <ul class="nav-links">
             <li><a href="#home">ہوم</a></li>
             <li><a href="#collections">عطر کلیکشن</a></li>
+            <li><a href="#facebook-feed">تازہ ترین اپڈیٹس</a></li>
         </ul>
         
         <div class="brand-container">
@@ -281,6 +296,23 @@
                 <p class="product-price">Rs. 2,100</p>
             </div>
 
+        </div>
+    </section>
+
+    <section class="facebook-section" id="facebook-feed">
+        <h2 class="section-title">فیس بک پر ہماری تازہ ترین پوسٹس</h2>
+        <p style="margin-bottom: 30px; color: var(--text-dark); opacity: 0.8;">ہمارے پیج پر آنے والی نئی اپڈیٹس اور عطر کلیکشن یہاں دیکھیں</p>
+        
+        <div class="fb-container">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIttarMahal&tabs=timeline&width=500&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
+                    width="500" 
+                    height="600" 
+                    style="border:none; overflow:hidden; max-width:100%;" 
+                    scrolling="no" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
         </div>
     </section>
 
